@@ -15,8 +15,7 @@ export default function Profile({ profile, skills }) {
         </header>
 
         <p className="profile__text">
-          Atuo provendo HTML semântico e acessível, CSS escalável e JavaScript 
-          seguindo boas práticas de desenvolvimento.
+          I got one life and I intend to live an extraordinary life to be remembered.
         </p>
 
         <footer className="profile__footer">

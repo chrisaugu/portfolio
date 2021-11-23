@@ -13,10 +13,10 @@ export default function Home({ profile }) {
       <Head>
         <title>Christian: Front-end Engineer</title>
         
-        <meta name="description" content="Atuo provendo HTML semântico e acessível, CSS escalável e JavaScript seguindo boas práticas de desenvolvimento." />
+        <meta name="description" content="I got one life and I intend to live an extraordinary life to be remembered." />
         <meta name="keywords" content="Medina, Developer, Designer, UX, Front-end, Engineer" />
         <meta property="og:title" content="Christian Augustyn: Front-end Engineer" />
-        <meta property="og:description" content="Atuo provendo HTML semântico e acessível, CSS escalável e JavaScript seguindo boas práticas de desenvolvimento." />
+        <meta property="og:description" content="I got one life and I intend to live an extraordinary life to be remembered." />
         <meta property="og:image" content="/og.png" />
         
         <link rel="icon" href="/favicon.svg" />
