@@ -11,7 +11,7 @@ export default function Home({ profile }) {
   return (
     <>
       <Head>
-        <title>Christian: Front-end Engineer</title>
+        <title>Xian</title>
         
         <meta name="description" content="I got one life and I intend to live an extraordinary life to be remembered." />
         <meta name="keywords" content="Medina, Developer, Designer, UX, Front-end, Engineer" />
