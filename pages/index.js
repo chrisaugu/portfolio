@@ -11,11 +11,11 @@ export default function Home({ profile }) {
   return (
     <>
       <Head>
-        <title>Gabriel Medina: Front-end Engineer</title>
+        <title>Christian: Front-end Engineer</title>
         
         <meta name="description" content="Atuo provendo HTML semântico e acessível, CSS escalável e JavaScript seguindo boas práticas de desenvolvimento." />
         <meta name="keywords" content="Medina, Developer, Designer, UX, Front-end, Engineer" />
-        <meta property="og:title" content="Gabriel Medina: Front-end Engineer" />
+        <meta property="og:title" content="Christian Augustyn: Front-end Engineer" />
         <meta property="og:description" content="Atuo provendo HTML semântico e acessível, CSS escalável e JavaScript seguindo boas práticas de desenvolvimento." />
         <meta property="og:image" content="/og.png" />
         
@@ -34,7 +34,7 @@ export default function Home({ profile }) {
 }
 
 export async function getStaticProps() {
-  const responseProfile = await api.get('/users/gabrielmedina')
+  const responseProfile = await api.get('/users/chrisaugu')
     .then(({ data }) => {
       return { profile: data }
     })

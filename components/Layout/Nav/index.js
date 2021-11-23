@@ -19,7 +19,7 @@ export default function Nav() {
             className="nav__list-link"
             target="_blank"
             rel="noopener noreferrer"
-            href="https://www.linkedin.com/in/gmedinasantos/"
+            href="https://www.linkedin.com/in/chrisaugu/"
           >
             LinkedIn
           </a>
@@ -29,7 +29,7 @@ export default function Nav() {
             className="nav__list-link"
             target="_blank"
             rel="noopener noreferrer"
-            href="https://github.com/gabrielmedina"
+            href="https://github.com/chrisaugu"
           >
             GitHub
           </a>
