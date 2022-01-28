@@ -1,11 +1,13 @@
+import React from "react"
 import Head from 'next/head'
 
 import api from '../services/api'
 
 import skills from '../db/skills.json'
 
-import Nav from '../components/Layout/Nav'
-import Profile from '../components/Profile'
+import Nav from '../components/nav'
+import Profile from './profile'
+// import Projects from "./projects";
 
 export default function Home({ profile }) {
   return (
@@ -23,29 +25,33 @@ export default function Home({ profile }) {
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet" />
       </Head>
 
-      <Nav />
+      <Nav/>
 
-      <Profile
-        profile={profile}
-        skills={skills}
-      />
+      {/*<Profile*/}
+      {/*  profile={profile}*/}
+      {/*  skills={skills}*/}
+      {/*/>*/}
+
+      {/*<Projects*/}
+      {/*    projects={[]}*/}
+      {/*/>*/}
     </>
   )
 }
 
-export async function getStaticProps() {
-  const responseProfile = await api.get('/users/chrisaugu')
-    .then(({ data }) => {
-      return { profile: data }
-    })
-    .catch(error => {
-      return { error }
-    })
-  
-  return {
-    props: {
-      ...responseProfile,
-    },
-    revalidate: 10080, // one week
-  }    
-}
+// export async function getStaticProps() {
+//   const responseProfile = await api.get('/users/chrisaugu')
+//     .then(({ data }) => {
+//       return { profile: data }
+//     })
+//     .catch(error => {
+//       return { error }
+//     })
+//
+//   return {
+//     props: {
+//       ...responseProfile,
+//     },
+//     revalidate: 10080, // one week
+//   }
+// }

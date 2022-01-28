@@ -1,18 +1,37 @@
 {
-  "name": "chrisaugu.github.io",
-  "version": "0.1.0",
+  "name": "portfolio",
+  "description": "my personal portfolio",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "export": "next export"
+    "lint": "next lint",
+    "export": "next export",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "axios": "^0.21.1",
-    "next": "^11.0.1",
+    "axios": "^0.24.0",
+    "next": "^12.0.7",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "sass": "^1.26.10"
-  }
+    "react-helmet": "^6.1.0",
+    "sass": "^1.49.0",
+    "styled-components": "^5.3.3"
+  },
+  "devDependencies": {
+    "@zeit/next-sass": "^1.0.1",
+    "tailwindcss": "^3.0.17"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrisaugu/chrisaugu.github.io.git"
+  },
+  "author": "Christian Augustyn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chrisaugu/chrisaugu.github.io/issues"
+  },
+  "homepage": "https://github.com/chrisaugu/chrisaugu.github.io#readme"
 }
