@@ -1,14 +1,17 @@
-.projects {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1.6rem;
-  min-height: 100vh;
+#projects {
+  //display: flex;
+  //justify-content: center;
+  //align-items: center;
+  //padding: 1.6rem;
+  //min-height: 100vh;
+  margin-top: 110px;
 }
 
 .projects__wrapper {
   max-width: 680px;
   animation: projects-in ease .7s;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @keyframes projects-in {
@@ -150,4 +153,21 @@
   .projects__skills {
     flex-direction: row;
   }
+}
+
+.projects__list {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+}
+
+.projects__list_item {
+  width: 290px;
+  height: 112px;
+  padding: 7px;
+  margin: 0 6px;
+  background-color: aquamarine;
 }
