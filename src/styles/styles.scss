@@ -1,12 +1,3 @@
-// @import './base/reset';
-// @import './base/tokens';
-// @import './base/theme';
-// @import './base/utils';
-
-// @import './components/nav';
-// @import './components/profile';
-// @import './components/projects';
-
 @use "~inter-ui/default" with (
   $inter-font-display: swap,
   $inter-font-path: '~inter-ui/Inter (web)'
@@ -24,9 +15,52 @@ html { font-family: "Inter", "system-ui"; }
   html { font-family: "Inter var", "system-ui"; }
 }
 
+:root {
+  --color-primary-accent: #5b34da;
+  --color-primary: #000;
+  --color-background: #fff;
+  --color-secondary-accent: #358ef1;
+  --color-bg: #ffffff;
+  --scrollbar-track-color: #f1f1f1;
+  --scrollbar-thumb-color: #888;
+}
+
+// @import './base/reset';
+// @import './base/tokens';
+// @import './base/theme';
+// @import './base/utils';
+
+// @import './components/nav';
+// @import './components/profile';
+// @import './components/projects';
+
+
 @media(prefers-reduced-motion: no-preference) {
   :root {
     scroll-behavior: smooth;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  border-radius: 3px;
+  background-color: var(--scrollbar-track-color);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb-color);
+  border-radius: 5px;
+  border: 2px solid #fff;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+} 
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --scrollbar-track-color: #888;
+    --scrollbar-thumb-color: #f1f1f1;
   }
 }
 
@@ -101,14 +135,6 @@ nav.nav {
   // border-bottom: 1px solid rgba(255,255,255,.125);
 }
 
-:root {
-  --color-primary-accent: #5b34da;
-  --color-primary: #000;
-  --color-background: #fff;
-  --color-secondary-accent: #358ef1;
-  --color-bg: #ffffff;
-}
-
 [data-theme="dark"] {
   --color-bg: #000000;
   --color-primary-accent: #9d86e9;
@@ -125,4 +151,62 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Inter, Roboto, Segoe UI,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
     sans-serif;
+}
+
+
+section {
+  padding: 40px 30px;
+
+  .hero {
+    min-height: 100vh;
+    background-color: rgb(41, 42, 46);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+}
+
+.cursor {
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 1.5px solid white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  z-index: 100;
+  transform: translate(-50%, -50%);
+
+  &::after, &::before {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    left: 50%;
+    top: 50%;
+    border-radius: 50px;
+    transform: translate(-50%, -50%);
+    background-color: white;
+  }
+  &::before {
+    background-color: red;
+    // transform: translate(-50%, -50%) scale(3);
+  }
+
+  &.click::before {
+    animation: click 1s ease-in-out;
+  }
+}
+
+@keyframes click {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(5);
+  }
 }

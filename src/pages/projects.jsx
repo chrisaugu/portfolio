@@ -4,7 +4,6 @@ import Image from 'next/image'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
-import Nav from "../components/nav"
 import Layout from "../components/Layout"
 
 import sparkel from "../images/sparkle.svg"
