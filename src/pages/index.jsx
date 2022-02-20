@@ -8,7 +8,6 @@ import skills from '../db/skills.json'
 
 // import Logo from '../images/sparkle.svg'
 
-import Nav from '../components/Nav'
 // import Profile from './Profile'
 import Sparkles from "../components/Sparkles"
 import Layout from "../components/Layout"
