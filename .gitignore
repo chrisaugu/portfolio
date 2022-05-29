@@ -39,3 +39,6 @@ package-lock.json
 sal-master.zip
 
 *.sublime-project
+*.sublime-workspace
+
+backend

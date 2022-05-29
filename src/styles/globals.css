@@ -2,15 +2,85 @@
 @tailwind components;
 @tailwind utilities;
 
+/* @layer base {
+  h1 {
+    @apply text-2xl;
+  }
+  h2 {
+    @apply text-xl;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75;
+  }
+
+  .card {
+    background-color: theme('colors.white');
+    border-radius: theme('borderRadius.lg');
+    padding: theme('spacing.6');
+    box-shadow: theme('boxShadow.xl');
+  }
+}
+
+@layer utilities {
+  .content-auto {
+    content-visibility: auto;
+  }
+  
+  .bg-brand-gradient {
+    background-image: linear-gradient(#3490dc, #6574cd) !important;
+  }
+} */
+
 :root {
   --my-color: #fff;
   /* or any other variables/style */
+  --color-gray-100: hsl(210deg, 15%, 20%);
+  --color-gray-200: hsl(210deg, 15%, 25%);
+  --color-gray-300: hsl(210deg, 10%, 40%);
+  --color-gray-400: hsl(210deg, 9%, 45%);
+  --color-gray-500: hsl(210deg, 8%, 50%);
+  --color-gray-600: hsl(210deg, 12%, 55%);
+  --color-gray-700: hsl(210deg, 14%, 66%);
+  --color-gray-900: hsl(210deg, 25%, 88%);
+  --color-gray-1000: hsl(210deg, 25%, 96%);
 }
+
 @media (prefers-color-scheme: dark){
   :root{
     --my-color: #252b30;
   }
 }
+
+@media (orientation: landscape) {
+  ::-webkit-scrollbar {
+      width: 12px;
+      background-color: var(--color-gray-100);
+  }
+  ::-webkit-scrollbar-thumb {
+      border-radius: 5px;
+      background-color: var(--color-gray-700);
+      border: 2px solid var(--color-gray-100);
+  }
+
+  ::-webkit-scrollbar-track {
+      border-radius: 3px;
+      background-color: transparent;
+  }
+}
+
+::selection {
+  background-color: var(--selection-background, var(--color-primary));
+  color: var(--selection-text, white);
+  -webkit-text-fill-color: var(--selection-text) !important;
+  background-image: none !important;
+  background-clip: revert !important;
+  text-shadow: none !important;
+}
+
+
 [data-theme='dark'] {
   --my-color: #000;
 }
@@ -18,10 +88,10 @@
   --my-color: #ffabc8;
 }
 
-
 body {
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  background-color: var(--my-color);
+  background-color: linear-gradient(to right bottom, rgb(236, 72, 153), rgb(239, 68, 68), rgb(234, 179, 8));
+  /* background-color: var(--my-color); */
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
 }

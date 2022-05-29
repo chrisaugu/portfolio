@@ -10,5 +10,5 @@
       }
     }
   </style>
-  <rect class="favicon" x="50" y="50" width="400" height="400" rx="200" fill="#16161B"/>
+  <rect className="favicon" x="50" y="50" width="400" height="400" rx="200" fill="#16161B"/>
 </svg>

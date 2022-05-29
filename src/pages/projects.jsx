@@ -1,63 +1,80 @@
 import React from "react"
 import Head from "next/head"
+import Link from "next/link"
 import Image from 'next/image'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 import Layout from "../components/Layout"
-
 import sparkel from "../images/sparkle.svg"
-
 import skills from '../db/skills.json'
-
 import api from '../lib/api'
-
 import Img from "../images/projects.png"
 
 const Projects = ({projects}) => {
-  return (
-    <Layout>
-        <Head>
-            <title>Projects</title>
-        </Head>
+    return (
+        <Layout>
+            <Head>
+                <title>Projects</title>
+            </Head>
 
-        <section className="bg-white dark:bg-gray-800">
-          <div className="max-w-6xl mx-auto h-48 bg-white dark:bg-gray-800">
-            <h1 className=" text-5xl md:text-9xl font-bold py-20 text-center md:text-left">
-              Projects
-            </h1>
-          </div>
-          {/* Grid starts here */}
-          <div className="bg-[#F1F1F1] dark:bg-gray-900">
-            <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 py-20 pb-40">
-              {/* Single card */}
-              {
-                projects.map((project, i) => (
-                    <a
-                    href={project.html_url}
-                    className="w-full block shadow-2xl"
-                    >
-                        <div className="relative overflow-hidden">
-                          <Image
-                            src={Img}
-                            alt="portfolio"
-                            className="transform hover:scale-125 transition duration-2000 ease-out"
-                          />
-                          <h1 className="absolute top-10 left-10 text-gray-50 font-bold text-xl bg-red-500 rounded-md px-2">
-                            {project.name}
-                          </h1>
-                          <h1 className="absolute background-blur bottom-10 left-10 text-gray-50 font-bold text-xl">
-                            {project.description}
-                          </h1>
-                        </div>
-                    </a>
-                ))
-              }
-            </div>
-          </div>
-        </section>
+            <section className="bg-white dark:bg-gray-800">
+                <div className="max-w-6xl mx-auto h-48 bg-white dark:bg-gray-800">
+                    <h1 className=" text-5xl md:text-9xl font-bold py-20 text-center md:text-left">
+                        Projects
+                    </h1>
+                </div>
 
-         {/*<div className="flex min-h-screen justify-center items-center">
+                {/* Grid starts here */}
+                <div className="xbg-[#F1F1F1] dark:bg-gray-900">
+                    <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-2 py-20 pb-40">
+                        {
+                            projects.map((project, i) => (
+                                <Link href={project.html_url}>
+                                    <a className="card bg-base-100 shadow-xl image-full">
+                                        <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" /></figure>
+                                        <div className="card-body">
+                                            <h2 class="card-title">{project.name}</h2>
+                                            <p>{project.description}</p>
+                                            <div class="card-actions justify-end">
+                                                <div class="badge badge-outline">Languages: {project.language}</div> 
+                                                <div class="badge badge-outline">Stars: {project.stargazers_count}</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </Link>
+                            ))
+                        }
+                    </div>
+                    {/*</div><div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 py-20 pb-40">
+                        {/* Single card *}
+                        {
+                            projects.map((project, i) => (
+                                <a
+                                    href={project.html_url}
+                                    className="w-full block shadow-2xl"
+                                >
+                                    <div className="relative overflow-hidden">
+                                        <Image
+                                            src={Img}
+                                            alt="portfolio"
+                                            className="transform hover:scale-125 transition duration-2000 ease-out"
+                                        />
+                                        <h1 className="absolute top-10 left-10 text-gray-50 font-bold text-xl bg-red-500 rounded-md px-2">
+                                            {project.name}
+                                        </h1>
+                                        <h1 className="absolute background-blur bottom-10 left-10 text-gray-50 font-bold text-xl">
+                                            {project.description}
+                                        </h1>
+                                    </div>
+                                </a>
+                            ))
+                        }
+                    </div>*/}
+                </div>
+            </section>
+
+            {/*<div className="flex min-h-screen justify-center items-center">
 //         </div>
 
 //             {/*<section id="projects">
@@ -136,7 +153,7 @@ const Projects = ({projects}) => {
       
 //       <div className="p-4 md:w-1/3">
 //         <div className="h-full border-2 border-gray-200 rounded-lg overflow-hidden">
-//           <img className="lg:h-48 md:h-36 w-full object-cover object-center" src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1049&q=80" alt="blog"/>
+//           <img className="lg:h-48 md:h-36 w-full object-cover object-center" src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auhref=format&fit=crop&w=1049&q=80" alt="blog"/>
 //           <div className="p-6">
 //             <h2 className="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">CATEGORY</h2>
 //             <h1 className="title-font text-lg font-medium text-gray-900 mb-3">The Catalyzer</h1>
@@ -268,7 +285,7 @@ const Projects = ({projects}) => {
 //     <div className="flex flex-wrap -m-4">
 //       <div className="p-4 md:w-1/3">
 //         <div className="h-full border-2 border-gray-200 rounded-lg overflow-hidden">
-//           <img className="lg:h-48 md:h-36 w-full object-cover object-center" src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1049&q=80" alt="blog"/>
+//           <img className="lg:h-48 md:h-36 w-full object-cover object-center" src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auhref=format&fit=crop&w=1049&q=80" alt="blog"/>
 //           <div className="p-6">
 //             <h2 className="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">CATEGORY</h2>
 //             <h1 className="title-font text-lg font-medium text-gray-900 mb-3">The Catalyzer</h1>
@@ -297,7 +314,7 @@ const Projects = ({projects}) => {
 //       </div>
 //       <div className="p-4 md:w-1/3">
 //         <div className="h-full border-2 border-gray-200 rounded-lg overflow-hidden">
-//           <img className="lg:h-48 md:h-36 w-full object-cover object-center" src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="blog"/>
+//           <img className="lg:h-48 md:h-36 w-full object-cover object-center" src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auhref=format&fit=crop&w=1050&q=80" alt="blog"/>
 //           <div className="p-6">
 //             <h2 className="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">CATEGORY</h2>
 //             <h1 className="title-font text-lg font-medium text-gray-900 mb-3">The 400 Blows</h1>
@@ -326,7 +343,7 @@ const Projects = ({projects}) => {
 //       </div>
 //       <div className="p-4 md:w-1/3">
 //         <div className="h-full border-2 border-gray-200 rounded-lg overflow-hidden">
-//           <img className="lg:h-48 md:h-36 w-full object-cover object-center" src="https://images.unsplash.com/photo-1593642703055-4b72c180d9b5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="blog"/>
+//           <img className="lg:h-48 md:h-36 w-full object-cover object-center" src="https://images.unsplash.com/photo-1593642703055-4b72c180d9b5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auhref=format&fit=crop&w=1050&q=80" alt="blog"/>
 //           <div className="p-6">
 //             <h2 className="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">CATEGORY</h2>
 //             <h1 className="title-font text-lg font-medium text-gray-900 mb-3">Shooting Stars</h1>
@@ -362,11 +379,13 @@ const Projects = ({projects}) => {
 }
 
 Projects.getInitialProps = async (ctx) => {
-  // const res = await api.get('/search/repositories?q=user:chrisaugu+sort:author-date-asc')
-  const res = await fetch('https://api.github.com/search/repositories?q=user:chrisaugu+sort:author-date-asc')
-  const json = await res.json()
-  return { projects: json.items }
+    // const res = await api.get('/search/repositories?q=user:chrisaugu+sort:author-date-asc')
+    const res = await fetch('https://api.github.com/search/repositories?q=user:chrisaugu+sort:author-date-asc')
+    const json = await res.json()
+    return { projects: json.items }
 }
+
+// "https://api.github.com/repos/chrisaugu/Test/contents/abc.txt"
 
 // This function gets called at build time
 // export async function getStaticProps() {

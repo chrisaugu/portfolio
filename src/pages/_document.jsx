@@ -1,5 +1,6 @@
 import React from "react"
 import Document, { Html, Head, Main, NextScript } from 'next/document'
+
 import { GTM_ID } from '../lib/gtm'
 
 export default class MyDocument extends Document {
@@ -10,16 +11,14 @@ export default class MyDocument extends Document {
 
     render() {
         return (
-            // <Html lang="en">
-            //     <Head/>
-            //     <body>
-            //     <Main />
-            //     <NextScript />
-            //     </body>
-            // </Html>
-
-            <Html>
-                <Head />
+            <Html lang="en">
+                <Head>
+                    {/* eslint-disable-next-line */}
+                    <link
+                        rel="stylesheet"
+                        href="https://fonts.googleapis.com/css?family=Staatliches"
+                    />
+                </Head>
                 <body>
                 <noscript>
                     <iframe

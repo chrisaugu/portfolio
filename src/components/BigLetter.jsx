@@ -1,8 +1,9 @@
 import React from 'react';
+import PropTypes from "prop-types";
 import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
 import { RainbowHighlight } from "./RainbowHighlight";
 
-const Hero = () => {
+const BigLetter = ({word, lead}) => {
   const colors = ["#F59E0B", "#84CC16", "#10B981", "#3B82F6"];
 
   return (
@@ -25,4 +26,9 @@ const Hero = () => {
   );
 }
 
-export default Hero;
+BigLetter.propType = {
+  word: PropTypes.string.isRequired,
+  lead: PropTypes.string.isRequired
+}
+
+export default BigLetter;
