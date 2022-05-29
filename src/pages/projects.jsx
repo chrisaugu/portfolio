@@ -27,7 +27,7 @@ const Projects = ({projects}) => {
 
                 {/* Grid starts here */}
                 <div className="xbg-[#F1F1F1] dark:bg-gray-900">
-                    <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-2 py-20 pb-40">
+                    <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 py-20 pb-40">
                         {
                             projects.map((project, i) => (
                                 <Link href={project.html_url}>
