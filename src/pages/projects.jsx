@@ -11,34 +11,34 @@ import skills from '../db/skills.json'
 import api from '../lib/api'
 import Img from "../images/projects.png"
 
-const Projects = ({projects}) => {
+const Projects = ({projects = []}) => {
     return (
-        <Layout>
-            <Head>
-                <title>Projects</title>
-            </Head>
+        <Layout title="Projects">
+
+            {/*<button className="rounded-2xl py-2 px-10 bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300">
+                hello
+            </button>*/}
 
             <section className="bg-white dark:bg-gray-800">
-                <div className="max-w-6xl mx-auto h-48 bg-white dark:bg-gray-800">
-                    <h1 className=" text-5xl md:text-9xl font-bold py-20 text-center md:text-left">
+                <div className="max-w-6xl mx-auto h-48 dark:bg-gray-800">
+                    <h1 className="text-5xl md:text-9xl font-bold py-20 text-center md:text-left">
                         Projects
                     </h1>
                 </div>
 
-                {/* Grid starts here */}
-                <div className="xbg-[#F1F1F1] dark:bg-gray-900">
-                    <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 py-20 pb-40">
+                <div className="bg-[#F1F1F1] dark:bg-gray-900 mt-20 mb-20 p-4 md:p-10 lg:p-20 relative rounded-2xl shadow-md max-w-6xl mx-auto">
+                    <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 py-20 pb-40">
                         {
                             projects.map((project, i) => (
                                 <Link href={project.html_url}>
-                                    <a className="card bg-base-100 shadow-xl image-full">
-                                        <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" /></figure>
+                                    <a className="card w-96 glass bg-base-100 shadow-xl image-full dark:bg-blend-darken">
+                                        <figure><img src="https://api.lorem.space/image/ai?w=400&h=225" alt={project.name} /></figure>
                                         <div className="card-body">
-                                            <h2 class="card-title">{project.name}</h2>
-                                            <p>{project.description}</p>
-                                            <div class="card-actions justify-end">
-                                                <div class="badge badge-outline">Languages: {project.language}</div> 
-                                                <div class="badge badge-outline">Stars: {project.stargazers_count}</div>
+                                            <h2 className="card-title font-bold font-medium">{project.name}</h2>
+                                            <p className="font-light my-2">{project.description}</p>
+                                            <div className="card-actions justify-end">
+                                                <div className="badge badge-outline bg-red-100 p-1 rounded-md m-1">Languages: {project.language}</div> 
+                                                <div className="badge badge-outline bg-red-100 p-1 rounded-md m-1">Stars: {project.stargazers_count}</div>
                                             </div>
                                         </div>
                                     </a>
@@ -46,6 +46,7 @@ const Projects = ({projects}) => {
                             ))
                         }
                     </div>
+
                     {/*</div><div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 py-20 pb-40">
                         {/* Single card *}
                         {
@@ -116,7 +117,7 @@ const Projects = ({projects}) => {
 //                                 <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
 //                                 <a href="#" className="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
 //                                     Read more
-//                                     <svg className="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+//                                     <svg className="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"></path></svg>
 //                                 </a>
 
 //                             </div>

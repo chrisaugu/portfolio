@@ -1,11 +1,15 @@
-import React, {useEffect, useState} from "react"
-import Head from "next/head"
+import React, {useEffect, useState} from "react";
+import Head from "next/head";
+import { useRouter } from "next/router";
+import useSWR from 'swr';
 
-import Footer from "./Footer"
 import Seo from "./Seo"
-import Header from "./Header"
+import Header from "./Header";
+import Footer from "./Footer";
 
 const Layout = ({title, children}) => {
+    const router = useRouter();
+    
     const useMousePosition = () => {
         const [mousePosition, setMousePosition] = useState({ x: null, y: null });
         const [scrollPos, setScrollPos] = useState({ x: null });
@@ -104,90 +108,33 @@ const Layout = ({title, children}) => {
         )
     }
 
-    const [top, setTop] = useState(true);
+    // const fetcher = (url) => fetch(url).then(res => res.json());
+    // const { data, error } = useSWR('/api/navigation', fetcher)
 
-    // detect whether user has scrolled the page down by 10px 
-    useEffect(() => {
-        const scrollHandler = () => {
-            window.pageYOffset > 10 ? setTop(false) : setTop(true)
-        };
-        window.addEventListener('scroll', scrollHandler);
-        return () => window.removeEventListener('scroll', scrollHandler);
-    }, [top]);
-
+    // if (error) return <div>Failed to load</div>
+    // if (!data) return <div>Loading...</div>
 
     return (
         <>
-            <Head>
-                <title>{title ? title : "😎 Xian"} | Web & Mobile Developer</title>
-            </Head>
-
-            <Seo/>
-
             {/* <CustomCursor/>*/}
 
             {/*<Hook/>*/}
 
+            <Seo title={title}/>
+
             <Header/>
 
-            <main className="w-full">
-                {children}
+            <main className="bg-white dark:bg-gray-800 w-full overflow-hidden">
+                <div className="container mx-auto">
+                    {children}
+                </div>
+                <div className={`xl:max-w-[1280px] w-full`}>
+                    {/*<Testimonials />*/}
+                </div>
             </main>
 
-            <Footer/>
-
+            <Footer />
         </>
-    )
+    );
 }
-
-export default Layout
-
-
-// const StyledMain = styled.main `
-//   height: calc(100vh - 5em);
-//   width: 100%;
-// `;
-
-// const MainLayoutContainer = styled.div `
-//   width: 100vw;
-//   height: 100vh;
-//   display: flex;
-//   flex-direction: column;
-// `;
-
-// function MainLayout(props) {
-//   const darkMode = useDarkMode(true);
-//   const currentTheme = darkMode.value ? darkTheme : lightTheme;
-
-//   const [isMounted, setIsMounted] = React.useState(false);
-//   React.useEffect(() => {
-//     setIsMounted(true);
-//   }, []);
-
-//   return (
-//     <>
-//         <Head>
-//             <title>Dark Mode demo</title>
-//         </Head>
-
-//         <ThemeProvider theme={currentTheme}> 
-//             { isMounted && (
-//                 <ThemeToggleContext.Provider
-//                     value={{
-//                       isDarkTheme: darkMode.value,
-//                       toggleTheme: darkMode.toggle,
-//                     }}
-//                 >
-//                     <MainLayoutContainer>
-//                       <Navbar title="Dark Mode Demo" />
-//                       <StyledMain>{props.children}</StyledMain>
-//                     </MainLayoutContainer>
-//                 </ThemeToggleContext.Provider>
-//             )
-//         }
-//         </ThemeProvider> 
-//     </>
-//   );
-// }
-
-// export default MainLayout;
+export default Layout;

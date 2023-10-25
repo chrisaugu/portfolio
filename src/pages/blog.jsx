@@ -6,7 +6,7 @@ import { fetchAPI } from "../lib/api";
 
 const Blog = ({ articles, categories, homepage }) => {
   return (
-      <Layout title="blog" categories={categories}>
+      <Layout title="Blog" categories={categories}>
         <Seo seo={homepage.attributes.seo} />
 
         <section className="bg-white dark:bg-gray-800">

@@ -33,8 +33,7 @@ const Navbar = () => {
 					<NavLink href='/sign-up' activeStyle>
 						Sign Up
 					</NavLink>
-					{/* Second Nav */}
-					{/* <NavBtnLink href='/sign-in'>Sign In</NavBtnLink> */}
+					{/*<NavBtnLink href='/sign-in'>Sign In</NavBtnLink>*/}
 				</NavMenu>
 				<NavBtn>
 					<NavBtnLink href='/signin'>Sign In</NavBtnLink>

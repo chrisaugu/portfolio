@@ -8,57 +8,93 @@ import skills from '../db/skills.json'
 // import Sparkles from "../components/Sparkles"
 import Layout from "../components/Layout"
 import BigLetter from "../components/BigLetter"
-import HeroVideo from "../components/HeroVideo"
+import HeroVideo from "../components/Heros/HeroVideo"
+import Hero from "../components/Heros/Hero"
 import {ProductCard, Card} from "../components/Cards"
 import CallToAction from "../components/Sections/CallToAction";
+import Banner from "../components/Sections/Banner"
+import PostCard from "../components/Cards/PostCard"
+import GithubRepoCard from "../components/Cards/GithubRepoCard"
+import getLatestRepos from "../lib/getLatestRepos"
 
-// const ContainerDiv = styled.div `
-//   background: (props) => props.theme.color.background;
-//   color: (props) => props.theme.color.text;
-//   width: ''
-// `;
-
-const IndexPage = () => {
+export default function IndexPage() {
+    const names = ["Christian Augustyn", "Xian", "Kitten", "Google"]
     return (
-        <Layout>
+        <>
+            <Hero/>
 
-            <section className="hero-section">
-                <div className="hero min-h-screen" style={{backgroundImage: 'url(../kalibobo.jpg)'}}>
-                    <div className="hero-overlay bg-opacity-60"/>
-                    <div className="hero-content text-center text-neutral-content">
-                        <div className="max-w-md">
-                            <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-                            <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                            <button className="btn btn-primary">Get Started</button>
-                        </div>
+            {/*<div className="bg-deep-purple-accent-700">
+              <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+                <div className="max-w-xl sm:mx-auto lg:max-w-2xl">
+                  <div className="flex flex-col mb-16 sm:text-center sm:mb-0">
+                    <a href="/" className="mb-6 sm:mx-auto">
+                      <div className="flex items-center justify-center w-12 h-12 rounded-full bg-teal-accent-400">
+                        <svg
+                          className="w-10 h-10 text-deep-purple-900"
+                          stroke="currentColor"
+                          viewBox="0 0 52 52"
+                        >
+                          <polygon
+                            strokeWidth="3"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            fill="none"
+                            points="29 13 14 29 25 29 23 39 38 23 27 23"
+                          />
+                        </svg>
+                      </div>
+                    </a>
+                    <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+                      <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-white sm:text-4xl md:mx-auto">
+                        <span className="relative inline-block">
+                          <svg
+                            viewBox="0 0 52 24"
+                            fill="currentColor"
+                            className="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-deep-purple-accent-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block"
+                          >
+                            <defs>
+                              <pattern
+                                id="700c93bf-0068-4e32-aafe-ef5b6a647708"
+                                x="0"
+                                y="0"
+                                width=".135"
+                                height=".30"
+                              >
+                                <circle cx="1" cy="1" r=".7" />
+                              </pattern>
+                            </defs>
+                            <rect
+                              fill="url(#700c93bf-0068-4e32-aafe-ef5b6a647708)"
+                              width="52"
+                              height="24"
+                            />
+                          </svg>
+                          <span className="relative">The</span>
+                        </span>{' '}
+                        quick, brown fox jumps over a lazy dog
+                      </h2>
+                      <p className="text-base text-indigo-100 md:text-lg">
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                        accusantium doloremque rem aperiam, eaque ipsa quae.
+                      </p>
                     </div>
+                    <div>
+                      <a
+                        href="/"
+                        className="inline-flex items-center justify-center h-12 px-6 font-semibold tracking-wide text-teal-900 transition duration-200 rounded shadow-md hover:text-deep-purple-900 bg-teal-accent-400 hover:bg-deep-purple-accent-100 focus:shadow-outline focus:outline-none"
+                      >
+                        Get started
+                      </a>
+                    </div>
+                  </div>
                 </div>
-            </section>
+              </div>
+            </div>*/}
 
-            <HeroVideo />
+            <Banner/>
 
-            {/*<div className="bg-yellow-200">*/}
-            {/*    <div className="container flex px-6 py-4 mx-auto lg:h-128 lg:py-16">*/}
-            {/*        <div className="flex flex-col items-center w-full lg:flex-row lg:w-1/2">*/}
-            {/*            <div className="max-w-lg">*/}
-            {/*                <h1 className="text-3xl tracking-wide text-white text-gray-800 lg:text-4xl">Set your title</h1>*/}
-            {/*                <p className="mt-4 text-gray-300 text-gray-600">Lorem ipsum, dolor sit amet consectetur*/}
-            {/*                    adipisicing elit. Aut quia asperiores alias vero magnam recusandae adipisci ad vitae*/}
-            {/*                    laudantium quod rem voluptatem eos accusantium cumque.</p>*/}
-            {/*                <div className="mt-6">*/}
-            {/*                    <a href="#"*/}
-            {/*                       className="block px-3 py-2 font-semibold text-center text-white transition-colors duration-200 transform bg-blue-500 rounded-md lg:inline hover:bg-blue-400">Download*/}
-            {/*                    </a>*/}
-            {/*                </div>*/}
-            {/*            </div>*/}
-            {/*        </div>*/}
+            <PostCard/>
 
-            {/*        <div className="flex items-center justify-center w-full h-96 lg:w-1/2">*/}
-            {/*            <img className="object-cover w-full h-full max-w-2xl rounded-md"*/}
-            {/*                 src="https://source.unsplash.com/user/erondu/1600x900" alt="apple watch photo"/>*/}
-            {/*        </div>*/}
-            {/*    </div>*/}
-            {/*</div>*/}
 
             <BigLetter word={"Hello"} lead={"world"} />
 
@@ -71,11 +107,11 @@ const IndexPage = () => {
             {/*<ProductCard/>*/}
             {/*<Card/>*/}
 
-            {/*<div className="flex flex-col w-full lg:flex-row">*/}
-            {/*  <div className="grid flex-grow h-32 card bg-base-300 rounded-box place-items-center">content</div> */}
-            {/*  <div className="divider lg:divider-horizontal">OR</div> */}
-            {/*  <div className="grid flex-grow h-32 card bg-base-300 rounded-box place-items-center">content</div>*/}
-            {/*</div>*/}
+            <div className="flex flex-col w-full lg:flex-row">
+              <div className="grid flex-grow h-32 card bg-base-300 rounded-box place-items-center">content</div> 
+              <div className="divider lg:divider-horizontal">OR</div> 
+              <div className="grid flex-grow h-32 card bg-base-300 rounded-box place-items-center">content</div>
+            </div>
 
             {/*<ContainerDiv className="flex flex-col items-center justify-center w-full">*/}
             {/*    /!*<Sparkles>*!/*/}
@@ -147,7 +183,16 @@ const IndexPage = () => {
             {/*    </div>*/}
             {/*</section>*/}
 
-            <section>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto px-10 lg:-mt-10 gap-y-20">
+                {/* Single github Repo */}
+
+                {/*{repos &&
+                  repos.map((latestRepo, idx) => (
+                    <GithubRepoCard latestRepo={latestRepo} key="idx" />
+                  ))}*/}
+            </div>
+
+            {/* <section>
                 <div className="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 gap-8 lg:gap-16 lg:grid-cols-2">
                     <div
@@ -193,9 +238,9 @@ const IndexPage = () => {
                     </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
-            <section className="text-white bg-gray-900">
+            {/* <section className="text-white bg-gray-900">
                 <div className="max-w-screen-xl px-4 py-32 mx-auto lg:h-screen lg:items-center lg:flex">
                     <div className="max-w-3xl mx-auto text-center">
                     <h1 className="text-3xl font-extrabold text-transparent sm:text-5xl bg-clip-text bg-gradient-to-r from-green-300 via-blue-500 to-purple-600">
@@ -221,62 +266,43 @@ const IndexPage = () => {
                     </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
+
+            <button id="theme-toggle" type="button" className="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+              <svg id="theme-toggle-dark-icon" className="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+              <svg id="theme-toggle-light-icon" className="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fillRule="evenodd" clipRule="evenodd"></path></svg>
+            </button>
+
+            <div className="bg-white dark:bg-gray-800">
+              <h1 className="text-gray-900 dark:text-white">Dark mode</h1>
+              <p className="text-gray-600 dark:text-gray-300">
+                Lorem ipsum...
+              </p>
+            </div>
 
             <CallToAction/>
 
-            <aside className="p-12 bg-gray-900 sm:p-16 lg:p-24">
-                <div className="max-w-xl mx-auto text-center">
-                    <p className="text-sm font-medium text-gray-300">
-                    Don't let big companies own your data
-                    </p>
-
-                    <p className="mt-2 text-3xl font-bold text-white sm:text-4xl">
-                    Lorem ipsum dolor sit amet. Lorem, ipsum dolor.
-                    </p>
-
-                    <form className="mt-8 sm:flex">
-                    <div className="sm:flex-1">
-                        <label for="email" className="sr-only">Email</label>
-
-                        <input
-                        type="email"
-                        placeholder="Email address"
-                        className="w-full p-3 text-white bg-gray-800 border-2 border-gray-700 rounded-lg"
-                        />
-                    </div>
-
-                    <button
-                        type="submit"
-                        className="flex items-center justify-between w-full px-5 py-3 mt-4 font-medium text-white bg-blue-600 rounded-lg sm:w-auto sm:mt-0 sm:ml-4 hover:bg-blue-500"
-                    >
-                        Sign up
-
-                        <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        className="flex-shrink-0 w-4 h-4 ml-3"
-                        >
-                        <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M14 5l7 7m0 0l-7 7m7-7H3"
-                        />
-                        </svg>
-                    </button>
-                    </form>
-                </div>
-            </aside>
-
-        </Layout>
+        </>
     )
 }
 
-export default IndexPage
+export const getServerSideProps = async () => {
+  let token = process.env.GITHUB_AUTH_TOKEN;
+  console.log(token);
+  
+  let userData = {
+    username: 'chrisaugu'
+  }
 
+  // const repositories = await getLatestRepos(userData, token);
+  // console.log("REPOSITORIES", repositories);
+
+  return {
+    props: {
+      // repositories,
+    },
+  };
+};
 // export async function getStaticProps() {
 //   const responseProfile = await api.get('/users/chrisaugu')
 //     .then(({ data }) => {
@@ -293,3 +319,11 @@ export default IndexPage
 //     revalidate: 10080, // one week
 //   }
 // }
+
+IndexPage.getLayout = function getLayout(page) {
+  return (
+    <Layout>
+      {page}
+    </Layout>
+  )
+}
