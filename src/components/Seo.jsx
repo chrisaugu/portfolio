@@ -37,11 +37,11 @@ const Seo = ({ title, ...customMeta }) => {
                 <meta name="description" content={description} />
                 <meta name="image" content={image} />
                 
-                <link rel="apple-touch-icon" href="/favicons/apple-touch-icon.png" />
-                <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
-                <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
-                <link rel="icon" href="/favicons/favicon.svg" />
-                <link rel="shortcut icon" href="/favicons/favicon.ico" />
+                <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+                <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+                <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+                <link rel="icon" href="/favicon.svg" />
+                <link rel="shortcut icon" href="/favicon.ico" />
                 <meta name="msapplication-TileColor" content={config.backgroundColor} />
                 <meta name="msapplication-config" content="/browserconfig.xml" />
                 
