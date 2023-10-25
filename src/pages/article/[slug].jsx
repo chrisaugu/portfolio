@@ -7,7 +7,7 @@
 // import { fetchAPI } from "../../lib/api";
 // import { getStrapiMedia } from "../../lib/media";
 
-// const Article = ({ article, categories }) => {
+const Article = ({ article, categories }) => {
 //   const imageUrl = getStrapiMedia(article.attributes.image);
 
 //   const seo = {
@@ -17,7 +17,7 @@
 //     article: true,
 //   };
 
-//   return (
+  return (<div/>);
 //     <Layout categories={categories.data}>
 //       <Seo seo={seo} />
 //       <div
@@ -67,7 +67,7 @@
 //       </div>
 //     </Layout>
 //   );
-// };
+};
 
 // export async function getStaticPaths() {
 //   const articlesRes = await fetchAPI("/articles", { fields: ["slug"] });
@@ -97,4 +97,4 @@
 //   };
 // }
 
-// export default Article;
+export default Article;

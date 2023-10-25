@@ -4,12 +4,13 @@
 
 // import { fetchAPI } from "../../lib/api";
 
-// const Category = ({ category, categories }) => {
+const Category = ({ category, categories }) => {
 //   const seo = {
 //     metaTitle: category.attributes.name,
 //     metaDescription: `All ${category.attributes.name} articles`,
 //   };
 
+  return (<div/>);
 //   return (
 //     <Layout categories={categories.data}>
 //       <Seo seo={seo} />
@@ -21,7 +22,7 @@
 //       </div>
 //     </Layout>
 //   );
-// };
+};
 
 // export async function getStaticPaths() {
 //   const categoriesRes = await fetchAPI("/categories", { fields: ["slug"] });
@@ -56,4 +57,4 @@
 //   };
 // }
 
-// export default Category;
+export default Category;
