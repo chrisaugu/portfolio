@@ -1,6 +1,6 @@
 import React from "react";
 
-import Card from "./Cards/Card";
+import {Card} from "./Cards/Card";
 
 const Articles = ({ articles }) => {
   const leftArticlesCount = Math.ceil(articles.length / 5);
