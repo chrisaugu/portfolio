@@ -30,7 +30,7 @@ const Projects = ({projects = []}) => {
                     <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 py-20 pb-40">
                         {
                             projects.map((project, i) => (
-                                <Link href={project.html_url}>
+                                <Link href={project.html_url} key={i}>
                                     <a className="card w-96 glass bg-base-100 shadow-xl image-full dark:bg-blend-darken">
                                         <figure><img src="https://api.lorem.space/image/ai?w=400&h=225" alt={project.name} /></figure>
                                         <div className="card-body">
