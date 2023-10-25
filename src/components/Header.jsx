@@ -16,10 +16,10 @@ export default () => {
         window.addEventListener('scroll', scrollHandler);
         return () => window.removeEventListener('scroll', scrollHandler);
     }, [top]);
-
+// nav backdrop-blur bg-white border-gray-200 px-2 sm:px-4 py-5 dark:bg-gray-800 z-10
     return (
         <>
-            <header className={`sticky top-0 z-50 text-sm shadow-sm body-font font-medium text-white bg-gray-900 border-b border-gray-800/75 xbackdrop-filter xbackdrop-blur {!top && 'blur shadow-lg'}`}>
+            <header className={`sticky xtop-0 xz-50 xtext-sm xshadow-sm xbody-font xfont-medium text-white xbg-gray-900 xborder-b xborder-gray-800/75 xbackdrop-filter xbackdrop-blur {!top && 'blur shadow-lg'}`}>
             
                 {/* <div className="px-4 py-3 text-white bg-indigo-600 sm:justify-between sm:items-center sm:flex sm:px-6 lg:px-8">
                     <p className="font-medium text-center sm:text-left">
@@ -46,7 +46,7 @@ export default () => {
                 <Nav>
                     <NavItem href="/" isActive>Home</NavItem>
                     <NavItem href="/about">About</NavItem>
-                    <NavItem href="/blog">Blog</NavItem>
+                    <NavItem href="https://blog.christianaugustyn.me">Blog</NavItem>
                     <NavItem href="/projects">Projects</NavItem>
                     <NavItem href="/movies">Movies</NavItem>
                     <NavItem href="/books">Books</NavItem>
