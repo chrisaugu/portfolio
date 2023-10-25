@@ -1,4 +1,4 @@
-<main className="w-full h-full flex items-center px-6 lg:px-32 bg-purple-900 text-white absolute">
+    <main className="w-full h-full flex items-center px-6 lg:px-32 bg-purple-900 text-white absolute">
       <header className="w-full absolute left-0 top-0 p-6 lg:p-32">
           <div className="flex justify-between">
             <div>

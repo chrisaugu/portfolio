@@ -1,5 +1,6 @@
 import React from "react"
 import styled, {keyframes} from "styled-components";
+import {random} from "gsap/gsap-core";
 
 // // Default color is a bright yellow
 // const DEFAULT_COLOR = 'hsl(50deg, 100%, 50%)';

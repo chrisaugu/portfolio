@@ -17,7 +17,7 @@ const path = require('path')
 // })
 
 module.exports = {
-  // reactStrictMode: true,
+  reactStrictMode: true,
   // env: {
   //   customKey: 'my-value',
   // },
@@ -31,4 +31,8 @@ module.exports = {
   //     '/projects': { path: '/projects' }
   //   }
   // }
-}
+  images: {
+    loader: "default",
+    domains: ["localhost"],
+  },
+};

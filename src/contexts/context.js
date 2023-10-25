@@ -19,7 +19,7 @@ function getInitialColorMode() {
   return 'light';
 }
 
-export const ThemeContext = createContext();
+export const ThemeContext = createContext(undefined);
 export const ThemeProvider = ({ children }) => {
   const [colorMode, rawSetColorMode] = useState(getInitialColorMode);
   const setColorMode = (value) => {
@@ -28,8 +28,8 @@ export const ThemeProvider = ({ children }) => {
     window.localStorage.setItem('color-mode', value);
   };
   return (
-    <ThemeContext.Provider value={{ colorMode, setColorMode }}>
-      {children}
-    </ThemeContext.Provider>
+      <ThemeContext.Provider value={{ colorMode, setColorMode }}>
+        {children}
+      </ThemeContext.Provider>
   );
 };
