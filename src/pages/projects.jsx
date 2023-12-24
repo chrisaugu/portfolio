@@ -12,42 +12,46 @@ import api from '../lib/api'
 import Img from "../images/projects.png"
 
 const Projects = ({projects = []}) => {
-    return (
-        <Layout title="Projects">
+  return (
+    <Layout title="Projects">
 
-            {/*<button className="rounded-2xl py-2 px-10 bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300">
+      {/*<button className="rounded-2xl py-2 px-10 bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300">
                 hello
             </button>*/}
 
-            <section className="bg-white dark:bg-gray-800">
-                <div className="max-w-6xl mx-auto h-48 dark:bg-gray-800">
-                    <h1 className="text-5xl md:text-9xl font-bold py-20 text-center md:text-left">
-                        Projects
-                    </h1>
-                </div>
+      <section className="bg-white dark:bg-gray-800">
+        <div className="max-w-6xl mx-auto h-48 dark:bg-gray-800">
+          <h1 className="text-5xl md:text-9xl font-bold py-20 text-center md:text-left">
+            Projects
+          </h1>
+        </div>
 
-                <div className="bg-[#F1F1F1] dark:bg-gray-900 mt-20 mb-20 p-4 md:p-10 lg:p-20 relative rounded-2xl shadow-md max-w-6xl mx-auto">
-                    <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 py-20 pb-40">
-                        {
-                            projects.map((project, i) => (
-                                <Link href={project.html_url} key={i}>
-                                    <a className="card w-96 glass bg-base-100 shadow-xl image-full dark:bg-blend-darken">
-                                        <figure><img src="https://api.lorem.space/image/ai?w=400&h=225" alt={project.name} /></figure>
-                                        <div className="card-body">
-                                            <h2 className="card-title font-bold font-medium">{project.name}</h2>
-                                            <p className="font-light my-2">{project.description}</p>
-                                            <div className="card-actions justify-end">
-                                                <div className="badge badge-outline bg-red-100 p-1 rounded-md m-1">Languages: {project.language}</div> 
-                                                <div className="badge badge-outline bg-red-100 p-1 rounded-md m-1">Stars: {project.stargazers_count}</div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </Link>
-                            ))
-                        }
-                    </div>
+        <div className="bg-[#F1F1F1] dark:bg-gray-900 mt-20 mb-20 p-4 md:p-10 lg:p-20 relative rounded-2xl shadow-md max-w-6xl mx-auto">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 py-20 pb-40">
+            {
+              projects && projects
+                .filter((project, i) => {
+                  return project.private !== true
+                })
+                .map((project, i) => (
+                  <Link href={project.html_url} key={i}>
+                    <a className="card w-96 glass bg-base-100 shadow-xl image-full dark:bg-blend-darken">
+                      <figure><img src="https://api.lorem.space/image/ai?w=400&h=225" alt={project.name} /></figure>
+                      <div className="card-body">
+                        <h2 className="card-title font-bold font-medium">{project.name}</h2>
+                        <p className="font-light my-2">{project.description}</p>
+                        <div className="card-actions justify-end">
+                          <div className="badge badge-outline bg-red-100 p-1 rounded-md m-1">Languages: {project.language}</div>
+                          <div className="badge badge-outline bg-red-100 p-1 rounded-md m-1">Stars: {project.stargazers_count}</div>
+                        </div>
+                      </div>
+                    </a>
+                  </Link>
+                ))
+            }
+          </div>
 
-                    {/*</div><div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 py-20 pb-40">
+          {/*</div><div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 py-20 pb-40">
                         {/* Single card *}
                         {
                             projects.map((project, i) => (
@@ -72,10 +76,10 @@ const Projects = ({projects = []}) => {
                             ))
                         }
                     </div>*/}
-                </div>
-            </section>
+        </div>
+      </section>
 
-            {/*<div className="flex min-h-screen justify-center items-center">
+      {/*<div className="flex min-h-screen justify-center items-center">
 //         </div>
 
 //             {/*<section id="projects">
@@ -105,8 +109,8 @@ const Projects = ({projects = []}) => {
 //                     </div>
 //                     <div className="grid sm:grid-cols-2 md:grid-cols-4 hover:grid-cols-4 gap-4">
 //                         {skills.map(skill => (
-//                             <div 
-//                                 className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700" 
+//                             <div
+//                                 className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
 //                                 key={skill.id}>
 //                                 <div className="block p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
 //                                     <img src={sparkel} className="rounded-t-lg" alt="image"/>
@@ -141,17 +145,17 @@ const Projects = ({projects = []}) => {
 //             <p className="leading-relaxed mb-3 w-1/2 h-3 animate-pulse bg-gray-400"></p>
 //             <div className="flex items-center flex-wrap ">
 //               <a className="bg-indigo-300 h-4 animate-pulse mt-2 w-32 inline-flex items-center md:mb-2 lg:mb-0">
-                
+
 //               </a>
 //               <span className="bg-indigo-300 w-16 mt-2 h-4 animate-pulse mr-3 px-2 inline-flex items-center ml-auto leading-none text-sm pr-5 py-1">
-                
+
 //               </span>
-              
+
 //             </div>
 //           </div>
 //         </div>
 //       </div>
-      
+
 //       <div className="p-4 md:w-1/3">
 //         <div className="h-full border-2 border-gray-200 rounded-lg overflow-hidden">
 //           <img className="lg:h-48 md:h-36 w-full object-cover object-center" src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auhref=format&fit=crop&w=1049&q=80" alt="blog"/>
@@ -192,12 +196,12 @@ const Projects = ({projects = []}) => {
 //             <p className="leading-relaxed mb-3 w-1/2 h-3 animate-pulse bg-gray-400"></p>
 //             <div className="flex items-center flex-wrap ">
 //               <a className="bg-indigo-300 h-4 animate-pulse mt-2 w-32 inline-flex items-center md:mb-2 lg:mb-0">
-                
+
 //               </a>
 //               <span className="bg-indigo-300 w-16 mt-2 h-4 animate-pulse mr-3 px-2 inline-flex items-center ml-auto leading-none text-sm pr-5 py-1">
-                
+
 //               </span>
-              
+
 //             </div>
 //           </div>
 //         </div>
@@ -222,12 +226,12 @@ const Projects = ({projects = []}) => {
 //             <p className="leading-relaxed mb-3 w-1/2 h-3 animate-pulse bg-gray-400"></p>
 //             <div className="flex items-center flex-wrap ">
 //               <a className="bg-indigo-300 h-4 animate-pulse mt-2 w-32 inline-flex items-center md:mb-2 lg:mb-0">
-                
+
 //               </a>
 //               <span className="bg-indigo-300 w-16 mt-2 h-4 animate-pulse mr-3 px-2 inline-flex items-center ml-auto leading-none text-sm pr-5 py-1">
-                
+
 //               </span>
-              
+
 //             </div>
 //           </div>
 //         </div>
@@ -243,12 +247,12 @@ const Projects = ({projects = []}) => {
 //             <p className="leading-relaxed mb-3 w-1/2 h-3 animate-pulse bg-gray-400"></p>
 //             <div className="flex items-center flex-wrap ">
 //               <a className="bg-indigo-300 h-4 animate-pulse mt-2 w-32 inline-flex items-center md:mb-2 lg:mb-0">
-                
+
 //               </a>
 //               <span className="bg-indigo-300 w-16 mt-2 h-4 animate-pulse mr-3 px-2 inline-flex items-center ml-auto leading-none text-sm pr-5 py-1">
-                
+
 //               </span>
-              
+
 //             </div>
 //           </div>
 //         </div>
@@ -264,12 +268,12 @@ const Projects = ({projects = []}) => {
 //             <p className="leading-relaxed mb-3 w-1/2 h-3 animate-pulse bg-gray-400"></p>
 //             <div className="flex items-center flex-wrap ">
 //               <a className="bg-indigo-300 h-4 animate-pulse mt-2 w-32 inline-flex items-center md:mb-2 lg:mb-0">
-                
+
 //               </a>
 //               <span className="bg-indigo-300 w-16 mt-2 h-4 animate-pulse mr-3 px-2 inline-flex items-center ml-auto leading-none text-sm pr-5 py-1">
-                
+
 //               </span>
-              
+
 //             </div>
 //           </div>
 //         </div>
@@ -375,15 +379,15 @@ const Projects = ({projects = []}) => {
 //   </div>
 // </section>*/}
 
-        </Layout>
-    )
+    </Layout>
+  )
 }
 
 Projects.getInitialProps = async (ctx) => {
-    // const res = await api.get('/search/repositories?q=user:chrisaugu+sort:author-date-asc')
-    const res = await fetch('https://api.github.com/search/repositories?q=user:chrisaugu+sort:author-date-asc')
-    const json = await res.json()
-    return { projects: json.items }
+  // const res = await api.get('/search/repositories?q=user:chrisaugu+sort:author-date-asc')
+  const res = await fetch('https://api.github.com/search/repositories?q=user:chrisaugu+sort:author-date-asc')
+  const json = await res.json()
+  return { projects: json.items }
 }
 
 // "https://api.github.com/repos/chrisaugu/Test/contents/abc.txt"
@@ -403,4 +407,4 @@ Projects.getInitialProps = async (ctx) => {
 //   }
 // }
 
-export default Projects
+export default Projects;

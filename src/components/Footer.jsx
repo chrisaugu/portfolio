@@ -25,7 +25,7 @@ export default () => (
                         <span className="block w-32 h-10 bg-gray-200 rounded-lg">kitten</span>
 
                         <p className="max-w-xs mt-4 text-sm text-gray-500">
-                        Thank you for visiting my personal portfolio website. Connect with me over socials.
+                          Thank you for visiting my personal portfolio website. Connect with me over socials.
                         </p>
 
                         <div className="flex mt-8 space-x-6 text-gray-500">
@@ -64,32 +64,32 @@ export default () => (
                     </div>
 
                     <div className="grid grid-cols-1 gap-8 lg:col-span-2 sm:grid-cols-2 lg:grid-cols-3">
-                        {/*<div>
+                        <div>
                             <p className="font-medium">
-                                Helpful Links
+                              More Links
                             </p>
 
                             <nav className="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
-                                <a className="hover:opacity-75 " href="/"> About </a>
-                                <a className="hover:opacity-75" href="/"> Meet the Team </a>
-                                <a className="hover:opacity-75" href="/"> History </a>
-                                <a className="hover:opacity-75" href="/"> Careers </a>
+                                <a className="hover:opacity-75 " href="/uses">Uses</a>
+                                <a className="hover:opacity-75" href="/terms">Terms</a>
+                                <a className="hover:opacity-75" href="/privacy">Policy</a>
+                                {/*<a className="hover:opacity-75" href="/"> Careers </a>*/}
                             </nav>
-                        </div>*/}
+                        </div>
 
-                        {/*<div>
+                        <div>
                             <p className="font-medium">
-                                Services
+                              Projects Links
                             </p>
 
                             <nav className="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
-                                <a className="hover:opacity-75" href=""> 1on1 Coaching </a>
-                                <a className="hover:opacity-75" href=""> Company Review </a>
-                                <a className="hover:opacity-75" href=""> Accounts Review </a>
-                                <a className="hover:opacity-75" href=""> HR Consulting </a>
-                                <a className="hover:opacity-75" href=""> SEO Optimisation </a>
+                                <a className="hover:opacity-75" href="https://praisdrop.christianaugustyn.me">PraisDrop</a>
+                                <a className="hover:opacity-75" href="https://blog.christianaugustyn.me">Blog</a>
+                                <a className="hover:opacity-75" href="https://em-earthquake-ah.christianaugustyn.me">EmEarthquakeAh</a>
+                                <a className="hover:opacity-75" href="https://nuku.christianaugustyn.me">Nuku</a>
+                                {/*<a className="hover:opacity-75" href=""></a>*/}
                             </nav>
-                        </div>*/}
+                        </div>
 
                         <div>
                             <p className="font-medium">

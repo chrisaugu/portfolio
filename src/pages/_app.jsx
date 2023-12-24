@@ -23,9 +23,9 @@ export const GlobalContext = createContext({});
 
 import { darkTheme, lightTheme } from "../theme";
 
-// export function reportWebVitals(metric) {
-//     console.log(metric)
-// }
+export function reportWebVitals(metric) {
+    console.log(metric)
+}
 
 function MyApp({ Component, pageProps }) {
     const { global } = pageProps;
@@ -73,7 +73,7 @@ function MyApp({ Component, pageProps }) {
 
     // Use the layout defined at the page level, if available
     const getLayout = Component.getLayout || ((page) => page)
-    
+
     // return getLayout(<Component {...pageProps} />)
 
     return getLayout(
@@ -192,7 +192,6 @@ function MyApp({ Component, pageProps }) {
                     </AuthUserProvider>
             </NextThemesProvider>*/}
             <Component {...pageProps} />
-
         </>
     )
 }

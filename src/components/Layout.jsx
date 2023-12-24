@@ -116,21 +116,15 @@ const Layout = ({title, children}) => {
 
     return (
         <>
-            {/* <CustomCursor/>*/}
-
+            {/*<CustomCursor/>*/}
             {/*<Hook/>*/}
 
-            <Seo title={title}/>
+            {/* <Seo title={title}/> */}
 
             <Header/>
 
-            <main className="bg-white dark:bg-gray-800 w-full overflow-hidden">
-                <div className="container mx-auto">
-                    {children}
-                </div>
-                <div className={`xl:max-w-[1280px] w-full`}>
-                    {/*<Testimonials />*/}
-                </div>
+            <main className="bg-white dark:bg-gray-800 w-full mx-auto overflow-hidden">
+                {children}
             </main>
 
             <Footer />

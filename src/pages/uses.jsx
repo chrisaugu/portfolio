@@ -10,19 +10,23 @@ export default function Uses() {
 
   return (
     <Layout title="Uses">
-      <section className="dark:bg-gray-800">
-        <div className="max-w-6xl mx-auto h-48 dark:bg-gray-800">
-          <h1 className="text-5xl md:text-9xl font-bold py-20 text-center md:text-left">
+      <section className="bg-white dark:bg-gray-800">
+          <div className="max-w-6xl mx-auto h-48 dark:bg-gray-800">
+            <h1 className="text-5xl md:text-9xl font-bold py-20 text-center md:text-left">
             Uses
           </h1>
         </div>
 
-        <div className="xbg-[#F1F1F1] dark:bg-gray-900 relative rounded-md shadow-md p-4 md:p-10 lg:p-20 max-w-6xl mx-auto mb-20">
-                    
+        <div className="relative rounded-2xl rounded-md shadow-md mt-20 mb-20 p-4 md:p-10 lg:p-20 max-w-6xl mx-auto mb-20 bg-[#F1F1F1] dark:bg-gray-900">
 
+        <h2 className="text-lg md:text-lg font-bold text-center md:text-left">
         This site uses;
+        </h2>
         <ul>
-        <li>hello</li>
+          <li>NextJS</li>
+          <li>SCSS</li>
+          <li>TailwindCSS</li>
+          <li>Next.JS</li>
         </ul>
 
         <a className="fixed flex items-center justify-center h-8 pr-2 pl-1 bg-blue-600 rounded-full bottom-0 right-0 mr-4 mb-4 shadow-lg text-blue-100 hover:bg-blue-600" href="https://twitter.com/lofiui" target="_top">

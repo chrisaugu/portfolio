@@ -203,37 +203,37 @@
 //   }
 // }
 
-// .cursor {
-//   position: absolute;
-//   left: 0;
-//   top: 0;
-//   border: 1.5px solid white;
-//   width: 40px;
-//   height: 40px;
-//   border-radius: 50px;
-//   z-index: 100;
-//   transform: translate(-50%, -50%);
+.cursor {
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 1.5px solid white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  z-index: 100;
+  transform: translate(-50%, -50%);
 
-//   &::after, &::before {
-//     content: '';
-//     position: absolute;
-//     width: 5px;
-//     height: 5px;
-//     left: 50%;
-//     top: 50%;
-//     border-radius: 50px;
-//     transform: translate(-50%, -50%);
-//     background-color: white;
-//   }
-//   &::before {
-//     background-color: red;
-//     // transform: translate(-50%, -50%) scale(3);
-//   }
+  &::after, &::before {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    left: 50%;
+    top: 50%;
+    border-radius: 50px;
+    transform: translate(-50%, -50%);
+    background-color: white;
+  }
+  &::before {
+    background-color: red;
+    // transform: translate(-50%, -50%) scale(3);
+  }
 
-//   &.click::before {
-//     animation: click 1s ease-in-out;
-//   }
-// }
+  &.click::before {
+    animation: click 1s ease-in-out;
+  }
+}
 
 // @keyframes click {
 //   0% {
