@@ -6,19 +6,20 @@ import skills from "../db/skills.json"
 
 import api from "../lib/api"
 
-export default function About() {
+export default function Privacy() {
 
   return (
       <Layout title="Privacy">
         <section className="bg-white dark:bg-gray-800">
+
           <div className="max-w-6xl mx-auto h-48 bg-white dark:bg-gray-800">
             <h1 className=" text-5xl md:text-9xl font-bold py-20 text-center md:text-left">
               About me
             </h1>
           </div>
 
-          <div className="bg-[#F1F1F1] dark:bg-gray-900">
-
+          <div className="relative rounded-md shadow-md mt-20 mb-20 p-4 md:p-10 lg:p-20 max-w-6xl mx-auto mb-20 bg-[#F1F1F1] dark:bg-gray-900">
+          {/*  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">*/}
             <div className="card w-96 bg-neutral text-neutral-content">
               <div className="card-body items-center text-center">
                 <h2 className="card-title">Cookies!</h2>
@@ -93,9 +94,4 @@ export default function About() {
 
       </Layout>
   )
-}
-
-About.getInitialProps = async (ctx) => {
-  const res = await api.get('/users/chrisaugu')
-  return { profile: res }
 }

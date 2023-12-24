@@ -8,18 +8,19 @@ import api from "../lib/api"
 export default function About() {
 
   return (
-      <>
-        <section className="bg-white dark:bg-gray-800">
-          <div className="max-w-6xl mx-auto h-48 dark:bg-gray-800">
-            <h1 className="text-5xl md:text-9xl font-bold py-20 text-center md:text-left">
-              About me
-            </h1>
-          </div>
+    <>
+      <section className="bg-white dark:bg-gray-800">
+        <div className="max-w-6xl mx-auto h-48 bg-white dark:bg-gray-800">
+          <h1 className="text-5xl md:text-9xl font-bold py-20 text-center md:text-left">
+            About me
+          </h1>
+        </div>
 
-          <div className="relative rounded-2xl rounded-md shadow-md mt-20 mb-20 p-4 md:p-10 lg:p-20 max-w-6xl mx-auto mb-20 bg-[#F1F1F1] dark:bg-gray-900">
-            I'm a motivated software developer and data scientist with 6+ years in the Application Development World, who loves challenges, learning, and improving my skills. Team player, not afraid of responsibility, ownership, and fresh ideas. I have experience in creating an app's architecture, leading projects, setting up CI/CD processes, land setting up, and improving processes.
+        <div className="relative rounded-md shadow-md mt-20 mb-20 p-4 md:p-10 lg:p-20 max-w-6xl mx-auto mb-20 bg-[#F1F1F1] dark:bg-gray-900">
+          {/*<div className="relative rounded-2xl rounded-md shadow-md mt-20 mb-20 p-4 md:p-10 lg:p-20 max-w-6xl mx-auto mb-20 bg-[#F1F1F1] dark:bg-gray-900">*/}
+          I'm a motivated software developer and data scientist with 6+ years in the Application Development World, who loves challenges, learning, and improving my skills. Team player, not afraid of responsibility, ownership, and fresh ideas. I have experience in creating an app's architecture, leading projects, setting up CI/CD processes, land setting up, and improving processes.
 
-            {/*<div className="card w-96 bg-neutral text-neutral-content">
+          {/*<div className="card w-96 bg-neutral text-neutral-content">
               <div className="card-body items-center text-center">
                 <h2 className="card-title">Cookies!</h2>
                 <p>We are using cookies for no reason.</p>
@@ -30,7 +31,7 @@ export default function About() {
               </div>
             </div>*/}
 
-            {/*<ol className="relative border-l border-gray-200 dark:border-gray-700">
+          {/*<ol className="relative border-l border-gray-200 dark:border-gray-700">
               <li className="mb-10 ml-4">
                 <div className="absolute w-3 h-3 bg-gray-200 rounded-full -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
                 <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">February 2022</time>
@@ -52,11 +53,11 @@ export default function About() {
               </li>
             </ol>*/}
 
-          </div>
+        </div>
 
-        </section>
+      </section>
 
-        {/*<section className="profile">
+      {/*<section className="profile">
           <div className="profile__wrapper">
             <header className="profile__header">
               <figure className="profile__figure">
@@ -90,7 +91,7 @@ export default function About() {
             </footer>
           </div>
         </section>*/}
-      </>
+    </>
   )
 }
 

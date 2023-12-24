@@ -119,7 +119,7 @@ const Layout = ({title, children}) => {
             {/*<CustomCursor/>*/}
             {/*<Hook/>*/}
 
-            <Seo title={title}/>
+            {/* <Seo title={title}/> */}
 
             <Header/>
 
