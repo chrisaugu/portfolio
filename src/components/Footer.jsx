@@ -87,7 +87,8 @@ export default () => (
                                 <a className="hover:opacity-75" href="https://blog.christianaugustyn.me">Blog</a>
                                 <a className="hover:opacity-75" href="https://em-earthquake-ah.christianaugustyn.me">EmEarthquakeAh</a>
                                 <a className="hover:opacity-75" href="https://nuku.christianaugustyn.me">Nuku</a>
-                                {/*<a className="hover:opacity-75" href=""></a>*/}
+                                <a className="hover:opacity-75" href="https://930.netlify.app/">930 Social</a>
+                                <a className="hover:opacity-75" href="https://pngmap.netlify.app/">PNG Map</a>
                             </nav>
                         </div>
 
