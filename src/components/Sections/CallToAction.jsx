@@ -1,6 +1,6 @@
 export default function CallToAction() {
     return (
-        <section className="py-20" style={{background: 'linear-gradient(90deg, #667eea 0%, #764ba2 100%)'}}>
+        <section className="py-20 bg-gradient-to-r from-green-300 to-yellow-300">
             <div className="container mx-auto px-6">
                 <h2 className="text-4xl font-bold mb-2 text-white">
                     Smart Health Monitoring Wristwatch!

@@ -43,7 +43,7 @@ export default function Hero() {
         text={["Hello world.", "What do I do now?"]}
         randomSpeed={true} />*/}
 
-      <div className={styles.section}>
+      <div className={`${styles.section} bg-gradient-to-r from-pink-500 to-yellow-500`}>
         <div className={styles.container}>
           <div className={styles.box}>
             <h1 className={styles.headingOne}>Hi there👋, I'm Christian Augustyn.</h1>

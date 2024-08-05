@@ -1,15 +1,28 @@
 import React from 'react'
 
-import Layout from "../components/Layout"
-
-import skills from "../db/skills.json"
-
-import api from "../lib/api"
+import Layout from "@/components/Layout"
+import skills from "@/db/skills.json"
+import api from "@/lib/api"
 
 export default function Privacy() {
 
   return (
       <Layout title="Privacy">
+        
+        <section className="bg-white py-[70px] dark:bg-dark">
+          <div className="mx-auto px-4 sm:container">
+            <div>
+              <h2 className="mb-2 text-2xl font-semibold xtext-dark dark:text-white">
+                States Statistics
+              </h2>
+              <p className="text-sm font-medium text-body-color xdark:text-dark-6">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
+                ultrices lectus sem.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <section className="bg-white dark:bg-gray-800">
 
           <div className="max-w-6xl mx-auto h-48 bg-white dark:bg-gray-800">

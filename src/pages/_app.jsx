@@ -3,50 +3,29 @@ import App from "next/app";
 import Head from 'next/head';
 import Script from 'next/script';
 import { useRouter } from 'next/router';
-import { ThemeProvider } from 'next-themes';
 
-import { fetchAPI } from "../lib/api";
-// import { getStrapiMedia } from "../lib/media";
+import { fetchAPI } from "@/lib/api";
+// import { getStrapiMedia } from "@/lib/media";
 
-import { GTM_ID, pageview } from '../lib/gtm';
-import * as gtag from '../lib/gtag';
-// import { ThemeContext } from '../lib/Theme';
-import { TOKENS_DARK, TOKENS_LIGHT } from '../lib/Tokens';
+import { GTM_ID, pageview } from '@/lib/gtm';
+import * as gtag from '@/lib/gtag';
+import { darkTheme, lightTheme, TOKENS_DARK, TOKENS_LIGHT } from '@/hooks/useTheme';
+import { ThemeProvider } from '@/contexts/ThemeContext';
 
-import "../styles/main.css";
-// import '../styles/output.css';
-import '../styles/globals.css';
-import "../styles/custom.scss";
+import "@/styles/main.css";
+// import '@/styles/output.css';
+import '@/styles/globals.css';
+import "@/styles/custom.scss";
 
 // Store Strapi Global object in context
 export const GlobalContext = createContext({});
-
-import { darkTheme, lightTheme } from "../theme";
 
 export function reportWebVitals(metric) {
     console.log(metric)
 }
 
 function MyApp({ Component, pageProps }) {
-    const { global } = pageProps;
     const router = useRouter();
-
-    const [themeType, setThemeType] = useState('light');
-    const switchThemes = () => {
-        setThemeType(last => (last === 'dark' ? 'light' : 'dark'))
-    }
-
-    const [theme, setTheme] = useState(TOKENS_DARK)
-    const value = { theme, setTheme }
-
-    useEffect(() => {
-        setTheme(window.matchMedia('(prefers-color-scheme: dark)').matches
-            ? TOKENS_DARK
-            : TOKENS_LIGHT)
-    }, []);
-
-    //   const darkMode = useDarkMode(true);
-    //   const currentTheme = darkMode.value ? darkTheme : lightTheme;
 
     //   const [isMounted, setIsMounted] = React.useState(false);
     //   React.useEffect(() => {
@@ -70,11 +49,8 @@ function MyApp({ Component, pageProps }) {
         }
     }, [router.events]);
 
-
     // Use the layout defined at the page level, if available
     const getLayout = Component.getLayout || ((page) => page)
-
-    // return getLayout(<Component {...pageProps} />)
 
     return getLayout(
         <>
@@ -117,7 +93,7 @@ function MyApp({ Component, pageProps }) {
                   function gtag(){dataLayer.push(arguments);}
                   gtag('js', new Date());
          
-                  gtag('config', 'GA_MEASUREMENT_ID');
+                  gtag('config', '${gtag.GA_MEASUREMENT_ID}');
                 `}
             </Script>
 
@@ -136,48 +112,11 @@ function MyApp({ Component, pageProps }) {
                 }}
             />
 
-            {/*<Script strategy="afterInteractive" src={"../script.js"} />*/}
+            {/*<Script strategy="afterInteractive" src={"@/script.js"} />*/}
 
-            {/*<ThemeContext.Provider value={value}>
-                <ThemeContext.Consumer>
-                    {value => (
-                        <div className={`theme ${value.theme}`}>
-                            <Component {...pageProps} />
-                        </div>
-                    )}
-                </ThemeContext.Consumer>
-            </ThemeContext.Provider>*/}
-
-            {/*<GlobalContext.Provider value={global.attributes}>*/}
-            {/*<ThemeProvider 
-                defaultTheme="system" 
-                attribute="class"
-                value={{
-                    light: lightTheme,
-                    dark: darkTheme
-                }}
-            >
+            <ThemeProvider>
                 <Component {...pageProps} />
-            </ThemeProvider>*/}
-         {/*<ThemeProvider theme={currentTheme}> */}
-             {/*{ isMounted && (*/}
-                 {/*<ThemeToggleContext.Provider*/}
-                     {/*value={{*/}
-                       {/*isDarkTheme: darkMode.value,*/}
-                       {/*toggleTheme: darkMode.toggle,*/}
-                     {/*}}*/}
-                 {/*>*/}
-                     {/*<MainLayoutContainer>*/}
-                       {/*<Navbar title="Dark Mode Demo" />*/}
-                       {/*<StyledMain>{props.children}</StyledMain>*/}
-                     {/*</MainLayoutContainer>*/}
-                 {/*</ThemeToggleContext.Provider>*/}
-             {/*)*/}
-         {/*}*/}
-         {/*</ThemeProvider> */}
-
-            {/*</GlobalContext.Provider>*/}
-
+            </ThemeProvider>
 
             {/*<NextThemesProvider
                 defaultTheme="system"
@@ -191,7 +130,6 @@ function MyApp({ Component, pageProps }) {
                         <Component {...pageProps} />
                     </AuthUserProvider>
             </NextThemesProvider>*/}
-            <Component {...pageProps} />
         </>
     )
 }

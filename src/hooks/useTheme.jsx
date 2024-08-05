@@ -1,4 +1,25 @@
-import { useEffect, useState } from 'react';
+import {useState, useEffect } from 'react';
+import {TOKENS_LIGHT, TOKENS_DARK} from "@/contexts/ThemeContext";
+
+export default function useTheme() {
+  const [theme, setTheme] = useState('light');
+  
+  useEffect(() => {
+    setTheme(window.matchMedia('(prefers-color-scheme: dark)').matches
+      ? TOKENS_DARK
+      : TOKENS_LIGHT)
+  }, []);
+
+  const toggleTheme = () => {
+    // setTheme(theme == 'light' ? 'dark' : 'light');
+    setTheme(last => (last === 'dark' ? 'light' : 'dark'))
+  }
+
+  return {
+    theme,
+    toggleTheme
+  }
+};
 
 export const useDarkMode = () => {
   const [theme, setTheme] = useState('light');

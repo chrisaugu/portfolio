@@ -42,3 +42,4 @@ sal-master.zip
 *.sublime-workspace
 
 backend
+yarn.lock

@@ -22,7 +22,7 @@ export default () => (
             <div className="max-w-screen-xl px-4 pt-16 pb-6 mx-auto sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
                     <div>
-                        <span className="block w-32 h-10 bg-gray-200 rounded-lg">kitten</span>
+                        <span className="block w-32 h-10 xbg-gray-200 rounded-lg">kitten</span>
 
                         <p className="max-w-xs mt-4 text-sm text-gray-500">
                           Thank you for visiting my personal portfolio website. Connect with me over socials.
@@ -87,7 +87,6 @@ export default () => (
                                 <a className="hover:opacity-75" href="https://blog.christianaugustyn.me">Blog</a>
                                 <a className="hover:opacity-75" href="https://em-earthquake-ah.christianaugustyn.me">EmEarthquakeAh</a>
                                 <a className="hover:opacity-75" href="https://nuku.christianaugustyn.me">Nuku</a>
-                                {/*<a className="hover:opacity-75" href=""></a>*/}
                             </nav>
                         </div>
 
