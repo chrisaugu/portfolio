@@ -118,10 +118,10 @@ export default function Nav({ children, ...props }) {
                 <div className="container flex flex-wrap justify-between items-center mx-auto">
 
                     <Link href="/">
-                        <a className="flex">
+                        <div className="flex">
                             {/*<img src="/images/logo.svg" className="mr-3 h-6 sm:h-10" alt="Flowbite Logo"/>*/}
                             <span className="self-center text-lg font-semibold whitespace-nowrap dark:text-white">kitten</span>
-                        </a>
+                        </div>
                     </Link>
 
 
