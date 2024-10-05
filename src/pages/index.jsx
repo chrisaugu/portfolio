@@ -1,5 +1,4 @@
 import React from "react"
-import styled from 'styled-components'
 
 import api from '../lib/api'
 import skills from '../db/skills.json'
@@ -26,7 +25,7 @@ export default function IndexPage() {
 
       <Banner/>
 
-      <PostCard/>
+      {/* <PostCard/> */}
 
       {/* <BigLetter word={"Hello"} lead={"world"} /> */}
 
@@ -122,18 +121,18 @@ export default function IndexPage() {
           ))}*/}
       </div>
 
-      <div className="bg-white dark:bg-gray-800 bg-gradient-to-r from-green-200 to-blue-500">
+      {/* <div className="bg-white dark:bg-gray-800 bg-gradient-to-r from-green-200 to-blue-500">
         <h1 className="text-gray-900 dark:text-white">Dark mode</h1>
         <p className="text-gray-600 dark:text-gray-300">
           Lorem ipsum...
         </p>
-      </div>
+      </div> */}
 
       <div className={`xl:max-w-[1280px] w-full`}>
         {/*<Testimonials />*/}
       </div>
 
-      <CallToAction/>
+      {/* <CallToAction/> */}
 
     </>
   )

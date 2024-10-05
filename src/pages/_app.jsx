@@ -16,9 +16,7 @@ import "@/styles/main.css";
 // import '@/styles/output.css';
 import '@/styles/globals.css';
 import "@/styles/custom.scss";
-
-// Store Strapi Global object in context
-export const GlobalContext = createContext({});
+import AppProvider, { GlobalContext } from '@/contexts/AppContext';
 
 export function reportWebVitals(metric) {
     console.log(metric)
@@ -96,6 +94,7 @@ function MyApp({ Component, pageProps }) {
                   gtag('config', '${gtag.GA_MEASUREMENT_ID}');
                 `}
             </Script>
+            <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 
             <Script
                 id="gtag-init"
@@ -113,10 +112,13 @@ function MyApp({ Component, pageProps }) {
             />
 
             {/*<Script strategy="afterInteractive" src={"@/script.js"} />*/}
+            
+            {/* <GlobalStyle /> */}
 
-            <ThemeProvider>
+            <AppProvider>
                 <Component {...pageProps} />
-            </ThemeProvider>
+                {/* <ContainerWrapper>{this.props.children}</ContainerWrapper> */}
+            </AppProvider>
 
             {/*<NextThemesProvider
                 defaultTheme="system"
@@ -126,9 +128,9 @@ function MyApp({ Component, pageProps }) {
                     dark: darkTheme.className
                 }}
             >
-                    <AuthUserProvider>
-                        <Component {...pageProps} />
-                    </AuthUserProvider>
+                <AuthUserProvider>
+                    <Component {...pageProps} />
+                </AuthUserProvider>
             </NextThemesProvider>*/}
         </>
     )

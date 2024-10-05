@@ -24,14 +24,3 @@ const ContainerWrapper = styled.div`
     'class hoc '
     'hook renderp';
 `
-
-export default class extends React.Component {
-  render() {
-    return (
-      <React.Fragment>
-        <GlobalStyle />
-        <ContainerWrapper>{this.props.children}</ContainerWrapper>
-      </React.Fragment>
-    )
-  }
-}

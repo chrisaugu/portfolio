@@ -13,10 +13,6 @@ const navigation = [
   { name: 'Calendar', href: '#', current: false }
 ]
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
-
 const StyledNavbar = styled.nav`
   height: 5em;
   border-bottom: 0.1em solid gray;
@@ -50,14 +46,14 @@ export default function Nav({ children, ...props }) {
     const { theme, toggleTheme, /*setTheme, isDarkTheme*/ } = useTheme();
 
     const [mounted, setMounted] = useState(false);
-    const [isOpen, setIsOpen] = useState(false);
+    const [showMenu, setShowMenu] = useState(true);
 
     useEffect(() => {
       setMounted(true);
     }, []);
 
     function openMobileMenu() {
-        setIsOpen(!isOpen)
+        setShowMenu(!showMenu)
     }
 
     return (
@@ -179,7 +175,7 @@ export default function Nav({ children, ...props }) {
 
                     </div>
 
-                    <div className={`${isOpen ? "md:block" : "hidden"} w-full md:w-auto`} id="mobile-menu">
+                    <div className={`${showMenu ? "show sm:block" : "hidden"} block w-full md:w-auto`} id="mobile-menu">
                         <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
                             {children}
                         </ul>
@@ -191,6 +187,7 @@ export default function Nav({ children, ...props }) {
                       <a href="/projects" class="font-bold px-3 py-2 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900">Projects</a>
                       <a href="/reports" class="font-bold px-3 py-2 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900">Reports</a>
                     </nav>*/}
+
                 </div>
             </nav>
 

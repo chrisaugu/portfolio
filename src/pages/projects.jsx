@@ -3,7 +3,6 @@ import Head from "next/head"
 import Link from "next/link"
 import Image from 'next/image'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
 
 import Layout from "../components/Layout"
 import sparkel from "../images/sparkle.svg"
@@ -34,18 +33,16 @@ const Projects = ({projects = []}) => {
                   return project.private !== true
                 })
                 .map((project, i) => (
-                  <Link href={project.html_url} key={i}>
-                    <a className="card w-96 glass bg-base-100 shadow-xl image-full dark:bg-blend-darken">
-                      <figure><img src="https://api.lorem.space/image/ai?w=400&h=225" alt={project.name} /></figure>
-                      <div className="card-body">
-                        <h2 className="card-title font-bold font-medium">{project.name}</h2>
-                        <p className="font-light my-2">{project.description}</p>
-                        <div className="card-actions justify-end">
-                          <div className="badge badge-outline bg-red-100 p-1 rounded-md m-1">Languages: {project.language}</div>
-                          <div className="badge badge-outline bg-red-100 p-1 rounded-md m-1">Stars: {project.stargazers_count}</div>
-                        </div>
+                  <Link href={project.html_url} key={i} className="card w-96 glass bg-base-100 shadow-xl image-full dark:bg-blend-darken">
+                    <figure><img src="https://api.lorem.space/image/ai?w=400&h=225" alt={project.name} /></figure>
+                    <div className="card-body">
+                      <h2 className="card-title font-bold">{project.name}</h2>
+                      <p className="font-light my-2">{project.description}</p>
+                      <div className="card-actions justify-end">
+                        <div className="badge badge-outline bg-red-100 p-1 rounded-md m-1">Languages: {project.language}</div>
+                        <div className="badge badge-outline bg-red-100 p-1 rounded-md m-1">Stars: {project.stargazers_count}</div>
                       </div>
-                    </a>
+                    </div>
                   </Link>
                 ))
             }

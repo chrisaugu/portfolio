@@ -15,7 +15,7 @@ export default () => {
 
     return (
         <>
-            <header className={`sticky w-full py-4 dark:bg-gray-800 xbg-gray-900 bg-white top-0 z-50 xshadow-sm xborder-b xborder-gray-800/75 xbackdrop-filter xbackdrop-blur {!top && 'blur shadow-lg'}`}>
+            <header className={`sticky w-full dark:bg-gray-800 xbg-gray-900 bg-white top-0 z-50 xshadow-sm xborder-b xborder-gray-800/75 xbackdrop-filter xbackdrop-blur {!top && 'blur shadow-lg'}`}>
                 {/* <Navbar/> */}
 
                 <Nav>

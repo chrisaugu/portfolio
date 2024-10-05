@@ -39,3 +39,7 @@ export function getInitialColorMode() {
   // color themes, let's default to 'light'.
   return 'light';
 }
+
+function classNames(...classes) {
+  return classes.filter(Boolean).join(' ')
+}

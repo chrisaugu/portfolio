@@ -17,7 +17,7 @@ export default () => (
             </ul>
         </footer>*/}
       
-        <footer className="bg-white bg-gray-50 dark:bg-gray-800">
+        <footer className="bg-white dark:bg-gray-800">
 
             <div className="max-w-screen-xl px-4 pt-16 pb-6 mx-auto sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
@@ -60,13 +60,27 @@ export default () => (
                                     <path fillRule="evenodd" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z" clipRule="evenodd" />
                                 </svg>
                             </a>
+
+                            <a className="hover:opacity-75" href="https://930.vercel.app/@christianaugustyn" target="_blank" rel="noreferrer">
+                                <span className="sr-only"> 930 </span>
+    
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <g clipPath="url(#clip0)">
+                                        <path d="M14.5 8.49993L12.328 10.6719C11.5779 11.4218 10.5607 11.8431 9.5 11.8431C8.43934 11.8431 7.42211 11.4218 6.672 10.6719L6.5 10.4999L11.429 5.57093C12.7552 4.24507 14.5537 3.50024 16.429 3.50024C18.3043 3.50024 20.1028 4.24507 21.429 5.57093V5.57093C22.5427 6.68473 23.2528 8.13836 23.4468 9.70145C23.6408 11.2645 23.3076 12.8477 22.5 14.1999" stroke="currentColor" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" className="svg-elem-1"></path>
+                                        <path d="M15.7662 11.766L19.3792 15.379C19.9416 15.9416 20.2575 16.7045 20.2575 17.5C20.2575 18.2955 19.9416 19.0584 19.3792 19.621L17.7432 21.257C17.186 21.8143 16.5245 22.2563 15.7965 22.5579C15.0685 22.8595 14.2882 23.0147 13.5002 23.0147C12.7122 23.0147 11.9319 22.8595 11.2038 22.5579C10.4758 22.2563 9.81433 21.8143 9.25717 21.257L3.57117 15.571C2.24532 14.2448 1.50049 12.4463 1.50049 10.571C1.50049 8.69571 2.24532 6.8972 3.57117 5.571V5.571C4.87841 4.26011 6.64894 3.51619 8.50017 3.5" stroke="currentColor" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" className="svg-elem-2"></path>
+                                        <path d="M18.891 20.109L15 16.219" stroke="currentColor" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" className="svg-elem-3"></path>
+                                        <path d="M16.0133 22.465L12.3833 18.835" stroke="currentColor" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" className="svg-elem-4"></path>
+                                    </g>
+                                    <defs><clipPath id="clip0"><rect width="24" height="24" fill="white" className="svg-elem-5"></rect></clipPath></defs>
+                                </svg>
+                            </a>
                         </div>
                     </div>
 
                     <div className="grid grid-cols-1 gap-8 lg:col-span-2 sm:grid-cols-2 lg:grid-cols-3">
                         <div>
                             <p className="font-medium">
-                              More Links
+                                <a className="hover:opacity-75" href="/uses">More Links</a>
                             </p>
 
                             <nav className="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
@@ -79,20 +93,20 @@ export default () => (
 
                         <div>
                             <p className="font-medium">
-                              Projects Links
+                                <a className="hover:opacity-75" href="/projects">Projects Links</a>
                             </p>
 
                             <nav className="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
-                                <a className="hover:opacity-75" href="https://praisdrop.christianaugustyn.me">PraisDrop</a>
+                                <a className="hover:opacity-75" href="https://praisdrop-client.vercel.app">PraisDrop</a>
                                 <a className="hover:opacity-75" href="https://blog.christianaugustyn.me">Blog</a>
-                                <a className="hover:opacity-75" href="https://em-earthquake-ah.christianaugustyn.me">EmEarthquakeAh</a>
-                                <a className="hover:opacity-75" href="https://nuku.christianaugustyn.me">Nuku</a>
+                                <a className="hover:opacity-75" href="https://em-earthquake-ah.netlify.app/">EmEarthquakeAh</a>
+                                <a className="hover:opacity-75" href="https://pngx-client.netlify.app">Nuku</a>
                             </nav>
                         </div>
 
                         <div>
                             <p className="font-medium">
-                                Contact
+                                <a className="hover:opacity-75" href="/contact">Contact</a>
                             </p>
 
                             <ul className="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
@@ -134,12 +148,17 @@ export default () => (
                     </div>
                 </div>
 
-                <p className="mt-8 text-xs text-gray-500">
-                    &copy; 2022 Christian Augustyn. All Rights Reserved. &nbsp; Made with ❤ in Beautiful Madang by Christian Augustyn.
-                </p>
+                <div className="flex flex-col md:flex-row mt-8 text-xs text-gray-500">
+                    <span className="text-xs text-gray-500">
+                        &copy; 2022 Christian Augustyn. All Rights Reserved.&nbsp;
+                    </span>
+                    <span className="text-xs text-gray-500">
+                        Made with ❤ in Beautiful Madang by Christian Augustyn.
+                    </span>
+                </div>
             </div>
-
-            {/*<div className="container px-6 py-8 mx-auto">
+{/* 
+            <div className="container px-6 py-8 mx-auto">
 
                 <hr className="my-10 border-gray-200 dark:border-gray-700" />
 
@@ -153,36 +172,27 @@ export default () => (
 
                     <ul className="flex flex-wrap items-center mt-3 sm:mt-0">
                         <li>
-                            <Link href="/profile">
-                                <a className="mr-4 text-sm text-gray-500 hover:underline md:mr-6 dark:text-gray-400">
-
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                        className="fill-current">
-                                        <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
-                                    </svg>
-                                </a>
+                            <Link href="/profile" className="mr-4 text-sm text-gray-500 hover:underline md:mr-6 dark:text-gray-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    className="fill-current">
+                                    <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                                </svg>
                             </Link>
                         </li>
                         <li>
-                            <Link href="/projects">
-                                <a className="mr-4 text-sm text-gray-500 hover:underline md:mr-6 dark:text-gray-400">
-                                
-                                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                        className="fill-current">
-                                       <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
-                                   </svg>
-                                </a>
+                            <Link href="/projects" className="mr-4 text-sm text-gray-500 hover:underline md:mr-6 dark:text-gray-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    className="fill-current">
+                                    <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+                                </svg>
                             </Link>
                         </li>
                         <li>
-                            <Link href="/movies">
-                                <a className="mr-4 text-sm text-gray-500 hover:underline md:mr-6 dark:text-gray-400">
-
-                                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                        className="fill-current">
-                                       <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
-                                   </svg>
-                               </a>
+                            <Link href="/movies" className="mr-4 text-sm text-gray-500 hover:underline md:mr-6 dark:text-gray-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    className="fill-current">
+                                    <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
+                                </svg>
                             </Link>
                         </li>
                     </ul>
@@ -227,7 +237,7 @@ export default () => (
                         </a>
                     </div>
                 </div>
-            </div>*/}
+            </div> */}
 
         </footer>
     </>

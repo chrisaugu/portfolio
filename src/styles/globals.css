@@ -170,3 +170,39 @@ a {
 /*.slider-container {
   @apply w-full;
 }*/
+
+
+#skills {
+  padding: 60px 0;
+  display: block;
+}
+.skills.astro-FbNQJnBY {
+  padding-top: 0px;
+}
+.skills {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
+.skills-item {
+  display: flex;
+  margin-right: 16px;
+}
+
+span.astro-nYZ90F6b {
+  display: none;
+}
+
+.astro-nYZ90F6b {
+  font-size: 50px;
+}
+.skills-item.astro-nYZ90F6b {
+  background-color: #5b5b5b;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+strong.astro-FbNQJnBY {
+  margin-top: 30px;
+  display: block;
+}
